@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:maksat_flutter_application/auth/auth_screen/init_screen/init_screen.dart';
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -9,7 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
+      home: InitScreen(),
+      // home: AuthScreen(isRegistrationForm: true,)
     );
   }
 }

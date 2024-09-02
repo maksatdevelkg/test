@@ -63,6 +63,14 @@ flutter:
 
   - assets/images/Rectangle.png
   - assets/images/Group.png
+  - assets/images/first_photo_scrols.png
+  - assets/images/second_photo_scrols.png
+  - assets/images/third_photo_scrols.png
+  - assets/images/four_photo_scrols.png
+  - assets/images/foto1.jpeg
+  - assets/images/foto2.jpeg
+  - assets/images/foto3.jpg
+  - assets/images/foto4.jpeg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

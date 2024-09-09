@@ -1,5 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:maksat_flutter_application/core/app_assets.dart';
+
 
 class HomeScrols extends StatelessWidget {
   const HomeScrols(
@@ -14,20 +15,11 @@ class HomeScrols extends StatelessWidget {
         SizedBox(
           height: mq.height * 0.5,
           width: mq.width * 0.92,
-          child: Image.network(
-            imageScrolls,
+          child: CachedNetworkImage(
+            imageUrl: imageScrolls,
+            placeholder: (context, url) => CircularProgressIndicator(),
+            errorWidget: (context, url, error) => Icon(Icons.error),
             fit: BoxFit.cover,
-          ),
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Container(
-          width: 140,
-          height: 50,
-          child: Image.asset(
-            avatar,
-            fit: BoxFit.contain,
           ),
         ),
       ],

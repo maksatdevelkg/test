@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:maksat_flutter_application/modules/story/story_screen.dart';
 
 import 'package:maksat_flutter_application/modules/welcome/welcome_screen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       home: WelcomeScreen(),
-      
     );
   }
 }

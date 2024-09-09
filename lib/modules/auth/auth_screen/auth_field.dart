@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
 
 class AuthField extends StatelessWidget {
-  const AuthField({super.key, required this.hintText});
+  const AuthField({super.key, required this.hintText, required this.controller});
 
   final String hintText;
+  final TextEditingController controller;
 
   @override
   Widget build(context) {
-    return Form(
-      child: TextFormField(
-        validator: (value) {
-          if ((value?.length ?? 0) < 3) {
-            return 'Слишком короткая почта';
-          }
-          if (!(value?.contains('@') ?? false)) {
-            return 'Отсутствует символ @';
-          }
-          return null;
-        },
+    return 
+      TextFormField(
+        controller: controller,
+        
         decoration:  InputDecoration(
           hintText: hintText,
           enabledBorder: OutlineInputBorder(
@@ -30,7 +24,7 @@ class AuthField extends StatelessWidget {
             borderSide: BorderSide(color: Colors.black, width: 2),
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }
